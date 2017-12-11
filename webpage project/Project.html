@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome Buddy!</title>
+	<style>
+
+	*{box-sizing: border-box;}
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+[class*="col-"] {
+    float: left;
+    border-color:1px solid black;
+}
+.row {
+    content: "";
+    clear: both;
+    display: table;
+    padding:20px;
+}
+body{
+background-image: url(images/bg.jpg);
+background-repeat: no-repeat;
+}
+p{
+	font-family:gabriola;
+	font-style: bold;
+	font-size:30px;
+}
+#dra:hover {
+  animation: shake 0.5s;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.mySlides {display:none}
+
+.slideshow-container {
+
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+</style>
+
+<script type="text/javascript">
+function medvih(){
+	var sound = new Audio('images/medvih.mp3');
+		sound.volume=1;
+		sound.play();
+}
+function antoni(){
+	var sound = new Audio('images/antoni.mp3');
+		sound.volume=1;
+		sound.play();
+}
+function reno(){
+	var sound = new Audio('images/reno.mp3');
+		sound.volume=1;
+		sound.play();
+}
+function dragoncall(){
+		var sound = new Audio('images/roar.mp3');
+		sound.play();
+	}
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  	}
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</head>
+<body>
+<audio src="images/bgm.mp3" autoplay loop></audio>
+<div class="col-9" style="margin-left:30%;margin-top:8%;">
+	<div class="col-12">
+		<h1 style="font-size:75px;font-family:gabriola; margin-bottom: 0px">Welcome Buddy!!<hr size="7" color="black" noshade width="500" align="left" style="margin-top:0px" ></h1>
+	</div>
+	<div class="col-7">
+		<div class="col-6" style="margin-bottom:0px;"><p style="margin-bottom:0px">we invite you for a BIG party!<hr size="2" color="black" noshade width="250" align="left" style="margin-top:0px"></p>
+		<P style="margin-top:0px;font-size:40px;">There're many fancy people!!</P></div>
+		<div class="col-5" id="dra">
+		<img src="images/크기변환_dragon.jpg" style="margin-left:0px; border-radius: 8px"><p style="font-size:18px;margin-top:0px">Little Dragon is waiting for you!<button onclick="dragoncall()">Hey Dragon!!</button></p></div>
+	</div>
+
+
+	<div class="col-7" style="margin-bottom:0px">
+		<div class="slideshow-container">
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		</div>	
+				<div class="mySlides fade">
+					    <div class="col-4" style="margin-right:10px">
+						<img src="images/크기변환_reno.jpg" style="width:100%; border-radius: 8px;">
+						<p style="font-family:gabriola;font-size:20px">Reno Jackson<button onclick="reno()">Hey!!</button></p>
+						</div>
+						<div class="col-7" style="margin-left:7px;padding:0px;"><P style="margin-bottom:0px">"We gonna be Rich!!"</P>
+							<p style="font-size:25px;margin-top:0px;">WOW! This party is awesome!!<br> you have to come here and play some game.<br> If you win, you will be RICH!</p>
+						</div>
+			   	</div>
+				<div class="mySlides fade">
+						<div class="col-4">
+						<img src="images/크기변환_wizard.jpg" style="width:100%; border-radius: 8px;">
+						<p style="font-family:gabriola;font-size:20px">Antonidas<button onclick="antoni()">Hey!!</button></p>
+						</div>
+						<div class="col-7" style="margin-left:7px;padding:0px;"><P style="margin-bottom:0px">"you require my assistance?"</P>
+							<p style="font-size:25px;margin-top:0px;">Don't have a time or money?<br>Just come in!! <br>I'm a MAGE</p>
+						</div>
+				</div>
+				<div class="mySlides fade">
+						<div class="col-4">
+						<img src="images/크기변환_medivh.jpg" style="width:100%; border-radius: 8px;">
+						<p style="font-family:gabriola;font-size:20px">Medivh<button onclick="medvih()">Hey!!</button></p>
+						</div>
+						<div class="col-7" style="margin-left:7px;padding:0px;"><P style="margin-bottom:0px">"A Game? So Kind Of You Join Me"</P>
+							<p style="font-size:25px;margin-top:0px;">Hey Come In<br>I like play the game<br>Of course, I always win</p>
+						</div>
+				</div>	
+			
+		
+	</div>
+	<div class="col-6" style="font-size:35px;font-family:gabriola;text-align:center;margin-top:0px">JOIN US!!</div>
+</div>
+	
+
+</body>
+</html>
